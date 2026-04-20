@@ -1136,18 +1136,19 @@ body.dark-mode .hero {
     }
 
     .timeline::before {
-        left: 30px;
+        left: 20px;
     }
 
     .timeline-item {
         width: 100%;
         padding-right: 0;
         text-align: left;
+        margin-left: 0;
     }
 
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
-        margin-left: 80px;
+        margin-left: 0;
     }
 
     .languages-strengths {
@@ -1160,6 +1161,10 @@ body.dark-mode .hero {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
     .nav-menu {
         display: none;
     }
@@ -1172,6 +1177,11 @@ body.dark-mode .hero {
         padding: 2rem 1rem;
     }
 
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
     }
@@ -1182,6 +1192,7 @@ body.dark-mode .hero {
 
     .hero-buttons {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .btn {
@@ -1190,11 +1201,12 @@ body.dark-mode .hero {
 
     .hero-image {
         margin-top: 2rem;
+        justify-content: center;
     }
 
     .avatar-circle {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
         font-size: 1.5rem;
     }
 
@@ -1215,10 +1227,6 @@ body.dark-mode .hero {
 
     .hero-info span {
         display: block;
-    }
-
-    .hero-image {
-        justify-content: center;
     }
 
     .contact-social-links {
@@ -1253,47 +1261,67 @@ body.dark-mode .hero {
 
     .contact-social-links {
         gap: 1rem;
+        flex-direction: column;
     }
 
     .contact-social-btn {
-        padding: 1.5rem 2rem;
-        min-width: 120px;
+        padding: 1.5rem 1.5rem;
+        min-width: unset;
+        width: 100%;
     }
 
     .contact-social-btn i {
         font-size: 2rem;
     }
+
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem 1rem;
+    }
+
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.25;
     }
 
     .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
         font-size: 1rem;
+        max-width: 100%;
     }
 
     .hero-buttons {
-        gap: 0.5rem;
+        gap: 0.75rem;
     }
 
     .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 2.2rem 0.9rem;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .badge {
-        padding: 0.4rem 0.8rem;
+        padding: 0.35rem 0.7rem;
         font-size: 0.75rem;
     }
 
     .skill-badges {
-        gap: 0.5rem;
+        gap: 0.4rem;
     }
 
     .stat h3 {
@@ -1305,7 +1333,11 @@ body.dark-mode .hero {
     }
 
     .strength-icon {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .hero-info {
+        font-size: 0.9rem;
     }
 
     .social-links {
@@ -1330,11 +1362,15 @@ body.dark-mode .hero {
 
     .contact-social-btn {
         width: 100%;
-        padding: 1.2rem 1.5rem;
+        padding: 1.2rem 1.2rem;
         min-width: unset;
     }
 
     .contact-social-btn i {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 0 0.8rem;
     }
 }
